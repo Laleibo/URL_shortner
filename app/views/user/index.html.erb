@@ -8,6 +8,5 @@
 
 <% @users.each do |x| %>
 <p>long Url:<%= x.url %> </p>
-<p> short Url:<a href="http://localhost:3000/show/<%=x.id %>">http://localhost:3000/show/<%=x.id %></a>
-<hr>
+<p> short Url: <%= link to user_url , user_url %> </p>
 <% end %>
