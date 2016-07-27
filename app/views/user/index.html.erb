@@ -8,5 +8,5 @@
 
 <% @users.each do |x| %>
 <p>long Url:<%= x.url %> </p>
-<p> short Url: <%= link to user_url(x) , user_url(x) %> </p>
+<p> short Url: <%= link_to user_url(x) , user_url(x) %> </p>
 <% end %>
