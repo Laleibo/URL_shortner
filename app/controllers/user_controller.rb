@@ -6,6 +6,12 @@ class UserController < ApplicationController
     @users = User.all
   end
 
+  def create
+     @save = User.new(url: params[:url])
+     @save.save
+    redirect_to root_path
+  end
+
   def show
     @user = User.find(params[:id])
 
@@ -16,11 +22,7 @@ class UserController < ApplicationController
     end
   end
 
-  def create
-     @save = User.new(url: params[:url])
-     @save.save
-     redirect_to root_path
-  end
+  def research
 
 
 end
